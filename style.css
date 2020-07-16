@@ -35,3 +35,10 @@ h1 {
 button {
     margin: 0 auto;
 }
+
+#selfpromo {
+    padding-bottom: 1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+}
