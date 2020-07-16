@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <div class="container">
+            <h1><small>Animal Crossing: New Horizons</small><br> Art Simulator</h1>
+        </div>
+
+        <div class="container">
+            <h3>About your island</h3>
+            <label>Number of Active Players: <input id="purchasesPerVisit" type="number" min="1" max="8" step="1"
+                    value="1">
+            </label>
+            <label>Percent days played: <input id="percentDaysChecked" type="number" min="0" max="1" step="0.1"
+                    value="0.9">
+            </label>
+
+            <h3>Animal Crossing Settings</h3>
+            <label>Total number of arts in the game: <input id="numberofArtsInMuseum" type="number" min="1" max="100"
+                    step="1" value="43"> </label>
+            <label>Average days per boat visit: <input id="daysPerBoatVisit" type="number" min="1" max="100" step="1"
+                    value="14"> </label>
+
+            <h3>Simulation Options</h3>
+            <label>Simulation Itterations: <input id="simulationItterations" type="number" min="1" max="1000" step="1"
+                    value="50"> </label>
+            <label>Max Simulatable Years: <input id="maxSimulatableYears" type="number" min="1" max="100" step="1"
+                    value="10">
+            </label>
+            <button id="run">Run Simulation!</button>
+        </div>
+
+        <div class="container">
+            <h2>Results</h2>
+            <h3 id="results"></h3>
+            <pre id="console"></pre>
+        </div>
+
+        <script src="./script.js"></script>
+    </main>
+</body>
+
+</html>

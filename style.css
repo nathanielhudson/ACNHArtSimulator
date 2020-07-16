@@ -1,0 +1,32 @@
+body {
+    background: url("./bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#console {
+    height: 400px;
+    overflow-y: scroll;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.container {
+    margin-top: 50px;
+    background: #F8F4E2;
+    border-radius: 40px;
+    padding: 45px;
+}
+
+input[type='number'] {
+    background: #FFF;;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+button {
+    margin: 0 auto;
+}
