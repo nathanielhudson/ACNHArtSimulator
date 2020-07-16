@@ -5,11 +5,11 @@ var museum;
 var daysElapsed;
 
 function log(msg) {
-    postMessage({type: "log", message: msg});
+    postMessage({ type: "log", message: msg });
 }
 
 function postResults(msg) {
-    postMessage({type: "result", message: msg});
+    postMessage({ type: "result", message: msg });
 }
 
 function simulate() {
@@ -80,15 +80,15 @@ function runSimulations() {
     var results = [];
     for (let i = 0; i < options.simulationItterations; i++) {
         var result = simulate();
-        log("Finished simulation in "+(result / 365).toFixed(2)+" years.")
+        log("Finished simulation in " + (result / 365).toFixed(2) + " years.")
         results.push(result);
     }
     var resultsAvg = results.reduce((a, b) => a + b, 0) / results.length;
-    log("Finished "+options.simulationItterations+" Runs. Average time was " + (resultsAvg / 365).toFixed(2) + " years");
-    postResults("On average it took " + (resultsAvg / 365).toFixed(2) + " years to get all the art.");
+    log("Finished " + options.simulationItterations + " Runs. Average time was " + (resultsAvg / 365).toFixed(2) + " years");
+    postResults("On average it took " + (resultsAvg / 365).toFixed(2) + " years to get all the art. Worst-case was " + (Math.max(...results) / 365).toFixed(2) + " years, while the best-case was only " + (Math.min(...results) / 365).toFixed(2) + " years.");
 }
 
-onmessage = function(e) {
+onmessage = function (e) {
     console.log('Message received from main script');
     options = e.data;
     runSimulations();

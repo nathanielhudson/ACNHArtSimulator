@@ -11,34 +11,59 @@
     <main class="wrapper">
         <div class="container">
             <h1><small>Animal Crossing: New Horizons</small><br> Art Simulator</h1>
+            <p id="lead">This tool simulates Redd visits to figure out approximately how long it takes to get all the
+                Animal Crossing: New Horizons Art. This tool assumes no trading, that you always have cash on hand, that
+                villagers never give you art, and that you have perfect forgery identification skills. Hit the "Run Simulation" button to see how long it takes!</p>
         </div>
 
         <div class="container">
             <h3>About your island</h3>
-            <label>Number of Active Players: <input id="purchasesPerVisit" type="number" min="1" max="8" step="1"
-                    value="1">
-            </label>
-            <label>Percent days played: <input id="percentDaysChecked" type="number" min="0" max="1" step="0.1"
-                    value="0.9">
-            </label>
+            <div class="row">
+                <div class="column">
+                    <label>Number of Active Players: <input id="purchasesPerVisit" type="number" min="1" max="8"
+                            step="1" value="1"></label>
+                </div>
+                <div class="column">
+                    <label>Percent days played: <input id="percentDaysChecked" type="number" min="0" max="1" step="0.1"
+                            value="0.9"></label>
+                </div>
+            </div>
+
+
+
+
 
             <h3>Animal Crossing Settings</h3>
-            <label>Total number of arts in the game: <input id="numberofArtsInMuseum" type="number" min="1" max="100"
-                    step="1" value="43"> </label>
-            <label>Average days per boat visit: <input id="daysPerBoatVisit" type="number" min="1" max="100" step="1"
-                    value="14"> </label>
+            <div class="row">
+                <div class="column">
+                    <label>Total number of arts in the game: <input id="numberofArtsInMuseum" type="number" min="1"
+                            max="100" step="1" value="43"> </label>
+                </div>
+                <div class="column">
+                    <label>Average days per boat visit: <input id="daysPerBoatVisit" type="number" min="1" max="100"
+                            step="1" value="14"> </label>
+                </div>
+            </div>
 
             <h3>Simulation Options</h3>
-            <label>Simulation Itterations: <input id="simulationItterations" type="number" min="1" max="1000" step="1"
-                    value="150"> </label>
-            <label>Max Simulatable Years: <input id="maxSimulatableYears" type="number" min="1" max="100" step="1"
-                    value="10"> </label>
-            <label>Logging Level:
-                <select id="loglevel">
-                    <option value="basic">Basic</option>
-                    <option value="detailed">Detailed (slower)</option>
-                </select>
-            </label>
+            <div class="row">
+                <div class="column">
+                    <label>Simulation Itterations: <input id="simulationItterations" type="number" min="1" max="1000"
+                            step="1" value="150"> </label>
+                </div>
+                <div class="column">
+                    <label>Max Simulatable Years: <input id="maxSimulatableYears" type="number" min="1" max="100"
+                            step="1" value="25"> </label>
+                </div>
+                <div class="column">
+                    <label>Logging Level:
+                        <select id="loglevel">
+                            <option value="basic">Basic</option>
+                            <option value="detailed">Detailed (slower)</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
 
             <button id="run">Run Simulation!</button>
         </div>

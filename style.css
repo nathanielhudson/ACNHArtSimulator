@@ -23,8 +23,13 @@ input[type='number'], select {
 }
 
 h1 {
+    font-size: 6rem;
     text-align: center;
+}
+
+#lead {
     margin: 0;
+    font-size: 1.2em;
 }
 
 button {
