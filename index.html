@@ -30,10 +30,16 @@
 
             <h3>Simulation Options</h3>
             <label>Simulation Itterations: <input id="simulationItterations" type="number" min="1" max="1000" step="1"
-                    value="50"> </label>
+                    value="150"> </label>
             <label>Max Simulatable Years: <input id="maxSimulatableYears" type="number" min="1" max="100" step="1"
-                    value="10">
+                    value="10"> </label>
+            <label>Logging Level:
+                <select id="loglevel">
+                    <option value="basic">Basic</option>
+                    <option value="detailed">Detailed (slower)</option>
+                </select>
             </label>
+
             <button id="run">Run Simulation!</button>
         </div>
 
