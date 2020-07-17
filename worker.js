@@ -63,6 +63,10 @@ function simulateVisit() {
             continue; //art is fake, skip
         }
         var artID = Math.floor(Math.random() * options.numberofArtsInMuseum); //get random art ID
+        if (Math.random() <= 0.2) {
+            //20 percent chance to give you a new art
+            artID = museum.findIndex(element => element === false);
+        }
         arts[i] = artID;
 
         if (purchasesMade < options.purchasesPerVisit && museum[artID] === false) {
